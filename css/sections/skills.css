@@ -1,0 +1,304 @@
+/* ================================================================
+   SKILLS + TECH STACK + SERVICES — Cluster 3
+   Three distinct visual treatments for expertise.
+   ================================================================ */
+
+/* ============================
+   SKILLS — Categorized tabs
+   ============================ */
+
+.skills-section {
+  position: relative;
+}
+
+/* Category filter tabs */
+.skills-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+}
+
+.skills-tab {
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-smooth);
+}
+
+.skills-tab:hover,
+.skills-tab.active {
+  color: var(--color-accent);
+  border-color: rgba(var(--color-accent-rgb), 0.3);
+  background: rgba(var(--color-accent-rgb), 0.08);
+}
+
+.skills-tab.active {
+  box-shadow: 0 0 16px rgba(var(--color-accent-rgb), 0.15);
+}
+
+/* Skills display grid */
+.skills-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: var(--space-4);
+}
+
+/* Individual skill item */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-4);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: transform var(--duration-base) var(--ease-spring),
+              box-shadow var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-smooth);
+  cursor: default;
+}
+
+.skill-item svg,
+.skill-item i {
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.skill-item span {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .skill-item:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: var(--shadow-glow);
+    border-color: rgba(var(--color-accent-rgb), 0.2);
+  }
+
+  .skill-item:hover span {
+    color: var(--color-text);
+  }
+}
+
+/* Hidden state for filter animation */
+.skill-item.hidden {
+  display: none;
+}
+
+
+/* ============================
+   TECH STACK — Grouped clusters
+   ============================ */
+
+.tech-section {
+  position: relative;
+}
+
+.tech-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-8);
+}
+
+.tech-group {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+          backdrop-filter: blur(var(--glass-blur));
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Colored accent line per group */
+.tech-group::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: var(--radius-pill);
+}
+
+.tech-group.languages::before   { background: linear-gradient(180deg, #f7df1e, #e44d26); }
+.tech-group.frameworks::before  { background: linear-gradient(180deg, #00d9ff, #61dafb); }
+.tech-group.design::before      { background: linear-gradient(180deg, #a259ff, #ff7262); }
+.tech-group.video::before       { background: linear-gradient(180deg, #9999ff, #00d9ff); }
+.tech-group.cloud::before       { background: linear-gradient(180deg, #ff9900, #10b981); }
+
+.tech-group h3 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-5);
+  padding-left: var(--space-4);
+  color: var(--color-text);
+}
+
+.tech-group-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-left: var(--space-4);
+}
+
+.tech-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.tech-item svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tech-item:hover {
+    border-color: rgba(var(--color-accent-rgb), 0.3);
+    color: var(--color-text);
+    background: rgba(var(--color-accent-rgb), 0.05);
+  }
+}
+
+
+/* ============================
+   SERVICES — Premium strips
+   ============================ */
+
+.services-section {
+  position: relative;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.service-strip {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  transition: transform var(--duration-base) var(--ease-spring),
+              box-shadow var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Alternate sides — visual arrow direction */
+.service-strip:nth-child(even) {
+  direction: rtl;
+}
+
+.service-strip:nth-child(even) > * {
+  direction: ltr;
+}
+
+/* Service icon */
+.service-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--color-accent-rgb), 0.08);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.15);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-3xl);
+  color: var(--color-accent);
+  flex-shrink: 0;
+  transition: transform var(--duration-base) var(--ease-spring);
+}
+
+.service-info h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+}
+
+.service-info p {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  max-width: 500px;
+}
+
+.service-arrow {
+  font-size: var(--text-xl);
+  color: var(--color-text-muted);
+  transition: transform var(--duration-base) var(--ease-spring),
+              color var(--duration-fast) var(--ease-smooth);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-strip:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+    border-color: rgba(var(--color-accent-rgb), 0.15);
+  }
+
+  .service-strip:hover .service-icon {
+    transform: scale(1.1);
+  }
+
+  .service-strip:hover .service-arrow {
+    color: var(--color-accent);
+    transform: translateX(6px);
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .skills-display {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .tech-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .service-strip {
+    grid-template-columns: auto 1fr;
+    gap: var(--space-4);
+    padding: var(--space-6);
+  }
+
+  .service-strip:nth-child(even) {
+    direction: ltr;
+  }
+
+  .service-arrow {
+    display: none;
+  }
+}

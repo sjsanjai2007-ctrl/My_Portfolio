@@ -1,0 +1,47 @@
+/* ================================================================
+   FOOTER — Minimal, elegant closing
+   ================================================================ */
+
+.footer {
+  padding: var(--space-12) var(--container-padding);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--section-gap);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-round);
+  font-size: var(--text-lg);
+  transition: color var(--duration-fast) var(--ease-smooth),
+              transform var(--duration-base) var(--ease-spring);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer-social a:hover {
+    color: var(--color-accent);
+    transform: translateY(-3px);
+  }
+}
+
+.footer p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.footer p span {
+  color: var(--color-accent);
+  font-weight: 600;
+}

@@ -1,0 +1,200 @@
+/* ================================================================
+   DESIGN TOKENS — Portfolio 2.0
+   Central source of truth for all visual properties.
+   Dark theme is default; light theme overrides below.
+   ================================================================ */
+
+:root {
+  /* ── Color Palette ── */
+  --color-bg:              #000000;
+  --color-bg-alt:          #09090b;
+  --color-bg-elevated:     #18181b;
+  --color-surface:         rgba(255, 255, 255, 0.04);
+  --color-surface-hover:   rgba(255, 255, 255, 0.08);
+  --color-border:          rgba(255, 255, 255, 0.08);
+  --color-border-hover:    rgba(255, 255, 255, 0.16);
+  --color-text:            #ffffff;
+  --color-text-secondary:  #a1a1aa;
+  --color-text-muted:      #71717a;
+  --color-accent:          #ffffff;
+  --color-accent-rgb:      255, 255, 255;
+  --color-accent-2:        #52525b;
+  --color-accent-2-rgb:    82, 82, 91;
+  --color-accent-3:        #3f3f46;
+  --color-success:         #10b981;
+  --color-error:           #ef4444;
+  --color-warning:         #f59e0b;
+
+  /* ── Typography ── */
+  --font-primary:  'Poppins', system-ui, -apple-system, sans-serif;
+  --font-display:  'Playfair Display', Georgia, serif;
+
+  /* Fluid type scale — min at 375px, max at 1440px */
+  --text-xs:    clamp(0.7rem,  0.65rem + 0.25vw, 0.75rem);
+  --text-sm:    clamp(0.8rem,  0.74rem + 0.3vw,  0.875rem);
+  --text-base:  clamp(0.9rem,  0.84rem + 0.3vw,  1rem);
+  --text-lg:    clamp(1rem,    0.92rem + 0.4vw,  1.125rem);
+  --text-xl:    clamp(1.1rem,  0.98rem + 0.6vw,  1.25rem);
+  --text-2xl:   clamp(1.3rem,  1.1rem  + 1vw,   1.5rem);
+  --text-3xl:   clamp(1.6rem,  1.3rem  + 1.5vw, 1.875rem);
+  --text-4xl:   clamp(1.9rem,  1.4rem  + 2.5vw, 2.25rem);
+  --text-5xl:   clamp(2.2rem,  1.5rem  + 3.5vw, 3rem);
+  --text-6xl:   clamp(2.8rem,  1.8rem  + 5vw,   3.75rem);
+  --text-hero:  clamp(3rem,    1.8rem  + 6vw,   5rem);
+
+  --leading-tight:    1.2;
+  --leading-snug:     1.35;
+  --leading-normal:   1.6;
+  --leading-relaxed:  1.75;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.08em;
+
+  /* ── Spacing (8px grid) ── */
+  --space-1:   0.25rem;   /*  4px */
+  --space-2:   0.5rem;    /*  8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.25rem;   /* 20px */
+  --space-6:   1.5rem;    /* 24px */
+  --space-8:   2rem;      /* 32px */
+  --space-10:  2.5rem;    /* 40px */
+  --space-12:  3rem;      /* 48px */
+  --space-16:  4rem;      /* 64px */
+  --space-20:  5rem;      /* 80px */
+  --space-24:  6rem;      /* 96px */
+  --space-32:  8rem;      /* 128px */
+  --space-40:  10rem;     /* 160px */
+
+  /* Section spacing */
+  --section-gap: clamp(5rem, 10vw, 8rem);
+
+  /* ── Shadows ── */
+  --shadow-xs:       0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm:       0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-md:       0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg:       0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-xl:       0 16px 48px rgba(0, 0, 0, 0.4);
+  --shadow-2xl:      0 24px 64px rgba(0, 0, 0, 0.5);
+  --shadow-glow:     0 0 20px rgba(var(--color-accent-rgb), 0.25);
+  --shadow-glow-lg:  0 0 40px rgba(var(--color-accent-rgb), 0.15),
+                     0 0 80px rgba(var(--color-accent-rgb), 0.05);
+  --shadow-glow-accent2: 0 0 20px rgba(var(--color-accent-2-rgb), 0.2);
+  --shadow-inner:    inset 0 1px 2px rgba(0, 0, 0, 0.3);
+
+  /* ── Border Radius ── */
+  --radius-xs:    4px;
+  --radius-sm:    8px;
+  --radius-md:    12px;
+  --radius-lg:    16px;
+  --radius-xl:    24px;
+  --radius-2xl:   32px;
+  --radius-pill:  9999px;
+  --radius-round: 50%;
+
+  /* ── Motion ── */
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce:   cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --ease-smooth:   cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  --duration-instant: 100ms;
+  --duration-fast:    150ms;
+  --duration-base:    300ms;
+  --duration-slow:    500ms;
+  --duration-slower:  700ms;
+  --duration-slowest: 1000ms;
+
+  /* ── Z-Index Scale ── */
+  --z-behind:   -1;
+  --z-base:     0;
+  --z-above:    10;
+  --z-float:    50;
+  --z-nav:      100;
+  --z-overlay:  500;
+  --z-modal:    1000;
+  --z-toast:    1100;
+  --z-top:      9999;
+
+  /* ── Layout ── */
+  --container-sm:       640px;
+  --container-md:       768px;
+  --container-lg:       1024px;
+  --container-xl:       1200px;
+  --container-wide:     1400px;
+  --container-padding:  clamp(1.25rem, 4vw, 2.5rem);
+
+  /* ── Glass Effect ── */
+  --glass-bg:         rgba(255, 255, 255, 0.04);
+  --glass-bg-hover:   rgba(255, 255, 255, 0.07);
+  --glass-border:     rgba(255, 255, 255, 0.08);
+  --glass-blur:       16px;
+  --glass-blur-heavy: 24px;
+
+  /* ── Component Tokens ── */
+
+  /* Buttons */
+  --btn-primary-bg:      linear-gradient(135deg, #3f3f46, #000000);
+  --btn-primary-shadow:  0 4px 20px rgba(255, 255, 255, 0.08);
+  --btn-primary-hover-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
+  --btn-padding:         14px 32px;
+  --btn-padding-sm:      10px 20px;
+  --btn-padding-lg:      16px 40px;
+  --btn-radius:          var(--radius-pill);
+  --btn-font-size:       var(--text-sm);
+  --btn-font-weight:     600;
+
+  /* Cards */
+  --card-bg:             var(--glass-bg);
+  --card-border:         1px solid var(--glass-border);
+  --card-shadow:         var(--shadow-md);
+  --card-hover-shadow:   var(--shadow-glow);
+  --card-radius:         var(--radius-xl);
+  --card-padding:        var(--space-6);
+
+  /* Navigation */
+  --nav-height:          72px;
+  --nav-bg:              rgba(5, 8, 22, 0.8);
+  --nav-blur:            var(--glass-blur);
+
+  /* Scroll Progress */
+  --progress-height:     3px;
+  --progress-bg:         #ffffff;
+}
+
+
+/* ================================================================
+   LIGHT THEME OVERRIDES
+   ================================================================ */
+
+.light-mode {
+  --color-bg:              #eef2f6;
+  --color-bg-alt:          #e3e8ef;
+  --color-bg-elevated:     #f8fafc;
+  --color-surface:         rgba(0, 0, 0, 0.03);
+  --color-surface-hover:   rgba(0, 0, 0, 0.06);
+  --color-border:          rgba(0, 0, 0, 0.08);
+  --color-border-hover:    rgba(0, 0, 0, 0.15);
+  --color-text:            #1a1a2e;
+  --color-text-secondary:  #4a5568;
+  --color-text-muted:      #9ca3af;
+
+  --shadow-xs:       0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm:       0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md:       0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg:       0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-xl:       0 16px 48px rgba(0, 0, 0, 0.12);
+  --shadow-2xl:      0 24px 64px rgba(0, 0, 0, 0.15);
+  --shadow-inner:    inset 0 1px 2px rgba(0, 0, 0, 0.06);
+
+  --glass-bg:          rgba(255, 255, 255, 0.6);
+  --glass-bg-hover:    rgba(255, 255, 255, 0.8);
+  --glass-border:      rgba(0, 0, 0, 0.08);
+
+  --nav-bg:            rgba(238, 242, 246, 0.85);
+
+  --card-bg:           rgba(255, 255, 255, 0.5);
+}

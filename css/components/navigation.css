@@ -1,0 +1,279 @@
+/* ================================================================
+   NAVIGATION — Fixed header, nav links, mobile menu,
+   scroll progress bar, theme toggle, back-to-top
+   ================================================================ */
+
+/* ── Header ── */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--container-padding);
+  background: transparent;
+  transition: background var(--duration-base) var(--ease-smooth),
+              box-shadow var(--duration-base) var(--ease-smooth);
+}
+
+/* Scrolled state — frosted glass */
+.header.scrolled {
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: blur(var(--nav-blur));
+          backdrop-filter: blur(var(--nav-blur));
+  box-shadow: 0 1px 0 var(--color-border);
+}
+
+/* ── Logo ── */
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.logo h1 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+}
+
+.logo h1 span {
+  color: var(--color-accent);
+}
+
+/* ── Desktop Nav Links ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.nav a {
+  position: relative;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: var(--space-2) 0;
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--btn-primary-bg);
+  border-radius: var(--radius-pill);
+  transition: width var(--duration-base) var(--ease-out);
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--color-text);
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+/* ── Header Right Controls ── */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* ── Theme Toggle — Slider switch ── */
+.theme-toggle {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background var(--duration-base) var(--ease-smooth),
+              border-color var(--duration-base) var(--ease-smooth);
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-border-hover);
+}
+
+.theme-toggle .slider-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-accent);
+  border-radius: var(--radius-round);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--duration-base) var(--ease-spring);
+  box-shadow: 0 2px 8px rgba(var(--color-accent-rgb), 0.3);
+}
+
+.theme-toggle .slider-knob i {
+  font-size: 10px;
+  color: var(--color-bg);
+}
+
+.light-mode .theme-toggle .slider-knob {
+  transform: translateX(24px);
+}
+
+/* ── Mobile Menu Toggle ── */
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  transition: background var(--duration-fast) var(--ease-smooth);
+}
+
+.menu-toggle:hover {
+  background: var(--color-surface);
+}
+
+/* ── Mobile Nav Overlay ── */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(320px, 85vw);
+    height: 100dvh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-6);
+    padding: var(--space-12) var(--space-8);
+    background: var(--color-bg);
+    border-left: 1px solid var(--color-border);
+    box-shadow: var(--shadow-2xl);
+    z-index: var(--z-overlay);
+    transition: right var(--duration-slow) var(--ease-out);
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav a {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: color var(--duration-fast) var(--ease-smooth),
+                opacity var(--duration-base) var(--ease-out),
+                transform var(--duration-base) var(--ease-out);
+  }
+
+  .nav.active a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Staggered reveal */
+  .nav.active a:nth-child(1) { transition-delay: 100ms; }
+  .nav.active a:nth-child(2) { transition-delay: 150ms; }
+  .nav.active a:nth-child(3) { transition-delay: 200ms; }
+  .nav.active a:nth-child(4) { transition-delay: 250ms; }
+  .nav.active a:nth-child(5) { transition-delay: 300ms; }
+  .nav.active a:nth-child(6) { transition-delay: 350ms; }
+  .nav.active a:nth-child(7) { transition-delay: 400ms; }
+
+  /* Backdrop overlay */
+  .nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: calc(var(--z-overlay) - 1);
+    opacity: 0;
+    transition: opacity var(--duration-base) var(--ease-smooth);
+  }
+
+  .nav-backdrop.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+
+/* ── Scroll Progress Bar ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: var(--progress-height);
+  background: var(--btn-primary-bg);
+  z-index: calc(var(--z-nav) + 1);
+  transition: none;
+  pointer-events: none;
+}
+
+
+/* ── Back to Top Button ── */
+.back-to-top {
+  position: fixed;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+          backdrop-filter: blur(var(--glass-blur));
+  border-radius: var(--radius-round);
+  color: var(--color-accent);
+  font-size: var(--text-lg);
+  z-index: var(--z-float);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity var(--duration-base) var(--ease-out),
+              visibility var(--duration-base) var(--ease-out),
+              transform var(--duration-base) var(--ease-spring),
+              box-shadow var(--duration-base) var(--ease-out);
+  box-shadow: var(--shadow-md);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .back-to-top:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+    border-color: rgba(var(--color-accent-rgb), 0.3);
+  }
+}
