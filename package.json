@@ -1,0 +1,27 @@
+{
+  "name": "portfolio_2_0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjsanjai2007-ctrl/My_Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sjsanjai2007-ctrl/My_Portfolio/issues"
+  },
+  "homepage": "https://github.com/sjsanjai2007-ctrl/My_Portfolio#readme",
+  "dependencies": {
+    "esbuild": "^0.28.1"
+  }
+}

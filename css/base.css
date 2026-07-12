@@ -28,8 +28,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  transition: background-color var(--duration-slow) var(--ease-smooth),
-              color var(--duration-slow) var(--ease-smooth);
 }
 
 /* Prevent scroll when modal/nav is open */

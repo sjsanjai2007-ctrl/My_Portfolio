@@ -6,7 +6,6 @@
 import { initHero } from './hero.js';
 import { initTyping } from './typing.js';
 import { initMagnetic } from './magnetic.js';
-import { initTheme } from './theme.js';
 import { initNavigation } from './navigation.js';
 import { initAnimations } from './animations.js';
 import { initModals } from './modal.js';
@@ -15,7 +14,6 @@ import { initContact } from './contact.js';
 /* ── Initialize on DOM ready ── */
 document.addEventListener('DOMContentLoaded', () => {
   // Critical path — immediate
-  initTheme();
   initNavigation();
 
   // Hero — high priority

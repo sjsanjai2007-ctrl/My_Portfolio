@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Favicon -->
+    <link rel="icon" type="image/png" href="myimg.png">
+    <title>Sanjai S J — Creative Developer & UI/UX Designer | Portfolio</title>
+    <meta name="description" content="Sanjai S J — Creative Frontend Developer, UI/UX Designer, and Cinematic Video Editor from Tamil Nadu, India. Building modern digital experiences with HTML, CSS, JavaScript.">
+    <meta name="keywords" content="Sanjai S J, frontend developer, UI/UX designer, video editor, portfolio, creative developer, Tamil Nadu, web developer India">
+    <meta name="author" content="Sanjai S J">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sanjai S J — Creative Developer & UI/UX Designer">
+    <meta property="og:description" content="Frontend Developer, UI/UX Designer & Cinematic Editor. View my projects, certificates, and get in touch.">
+    <meta property="og:image" content="myimg.png">
+    <meta property="og:url" content="https://sjsanjai2007-ctrl.github.io/MyPortfolio/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sanjai S J — Creative Developer">
+    <meta name="twitter:description" content="Portfolio of Sanjai S J — Creative Developer & Video Editor.">
+    <meta name="twitter:image" content="myimg.png">
+    <link rel="canonical" href="https://sjsanjai2007-ctrl.github.io/MyPortfolio/">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sanjai S J",
+        "url": "https://sjsanjai2007-ctrl.github.io/MyPortfolio/",
+        "jobTitle": "Creative Developer & UI/UX Designer",
+        "sameAs": [
+            "https://github.com/sjsanjai2007-ctrl",
+            "https://www.linkedin.com/in/sanjai-s-j-45227b3a2",
+            "https://www.instagram.com/sanjai._.sj"
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/toast.css">
+    <link rel="stylesheet" href="css/sections/hero.css">
+    <link rel="stylesheet" href="css/sections/about.css">
+    <link rel="stylesheet" href="css/sections/skills.css">
+    <link rel="stylesheet" href="css/sections/projects.css">
+    <link rel="stylesheet" href="css/sections/growth.css">
+    <link rel="stylesheet" href="css/sections/contact.css">
+    <link rel="stylesheet" href="css/sections/footer.css">
+    <link rel="stylesheet" href="css/components/cards.css?v=2">
+    <link rel="stylesheet" href="css/responsive.css?v=3">
+</head>
+
+<body class="dark-mode">
+
+    <!-- Accessibility: Skip nav -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast" role="alert" aria-live="polite" aria-atomic="true">
+        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+        <span id="toast-msg"></span>
+    </div>
+
+    <!-- Back to top -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+
+    <!-- ======================================
+         HEADER
+         ====================================== -->
+    <header class="header" role="banner">
+        <div class="logo">
+            <a href="#hero" aria-label="Sanjai S J — go to top">
+                <h1>SANJAI <span>S J</span></h1>
+            </a>
+        </div>
+
+        <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-controls">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navbar">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- Mobile nav backdrop -->
+        <div class="nav-backdrop" aria-hidden="true"></div>
+    </header>
+
+
+    <!-- ======================================
+         MAIN CONTENT
+         ====================================== -->
+    <main id="main">
+
+
+    <!-- ==========================================
+         CLUSTER 1: HERO — Premium Introduction
+         ========================================== -->
+    <section id="hero" class="hero" aria-labelledby="hero-name">
+
+        <!-- Canvas mesh background -->
+        <canvas class="hero-mesh" aria-hidden="true"></canvas>
+
+        <!-- Mouse spotlight -->
+        <div class="hero-spotlight" aria-hidden="true"></div>
+
+        <!-- Hero content grid -->
+        <div class="hero-content">
+
+            <!-- Text side -->
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 id="hero-name" class="hero-name">SANJAI <span class="accent">S J</span></h1>
+                <h2 class="hero-role">
+                    <span class="typing-text" aria-live="polite" aria-label="Creative Developer"></span><span class="typing-cursor" aria-hidden="true"></span>
+                </h2>
+                <p class="hero-description">
+                    Passionate about building modern digital experiences, cinematic edits,
+                    and visually attractive UI designs through creativity and technology.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary btn-magnetic">
+                        <i class="fa-solid fa-eye" aria-hidden="true"></i> View Projects
+                    </a>
+                    <a href="resume.pdf" download class="btn btn-secondary btn-magnetic">
+                        <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-ghost btn-magnetic">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact Me
+                    </a>
+                </div>
+
+                <!-- Social icons -->
+                <div class="hero-social" aria-label="Social media links">
+                    <a href="https://github.com/sjsanjai2007-ctrl" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sanjai._.sj" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sanjai-s-j-45227b3a2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual side -->
+            <div class="hero-visual">
+                <div class="hero-portrait">
+                    <img src="myimg.png" alt="Sanjai S J — Creative Developer and Video Editor" loading="eager" width="380" height="380">
+                </div>
+
+                <!-- Floating tech icons -->
+                <div class="floating-icon fi-html" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28"><path d="M5.9 27.2L3.7 2h24.7l-2.2 25.2L16 30z" fill="#e44d26"/><path d="M16 27.9l8.2-2.3 1.9-21.5H16z" fill="#f16529"/><path d="M16 13.4h-4.1l-.3-3.2H16V7.2H8.3l.8 9.3H16zm0 8l-3.4-.9-.2-2.5H9.2l.4 4.9 6.3 1.7z" fill="#ebebeb"/><path d="M16 13.4v3.1h3.8l-.4 4-3.4.9v3.2l6.3-1.8.8-9h-7.1zm0-6.2v3.1h7.5l.2-3.1z" fill="#fff"/></svg>
+                </div>
+                <div class="floating-icon fi-css" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28"><path d="M5.9 27.2L3.7 2h24.7l-2.2 25.2L16 30z" fill="#1572b6"/><path d="M16 27.9l8.2-2.3 1.9-21.5H16z" fill="#33a9dc"/><path d="M16 13.2h4.1l.3-4.1H16V6H23.8l-1.1 12.2H16zm0 8.3l-3.4-1-.2-2.5H9.2l.4 4.9 6.3 2.1z" fill="#ebebeb"/><path d="M16 13.2v3.1h-3.8l.3 3.3 3.3.9v3.2l-6.3-1.8-.8-9h7.3z" fill="#fff"/></svg>
+                </div>
+                <div class="floating-icon fi-js" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="4" fill="#f7df1e"/><path d="M9 24.1l1.7-1.1c.3.6.7 1.1 1.4 1.1.7 0 1.2-.3 1.2-1.4v-7.4h2.2v7.4c0 2.2-1.3 3.3-3.2 3.3-1.7 0-2.7-.9-3.3-2zm7.9-.2l1.8-1c.5.8 1.1 1.3 2.1 1.3.9 0 1.5-.4 1.5-1.1 0-.7-.6-1-1.6-1.4l-.5-.2c-1.6-.7-2.6-1.5-2.6-3.2 0-1.6 1.2-2.8 3.1-2.8 1.4 0 2.3.5 3 1.7l-1.7 1.1c-.4-.7-.8-.9-1.4-.9-.6 0-1 .4-1 .9 0 .6.4.9 1.3 1.3l.5.2c1.8.8 2.9 1.6 2.9 3.4 0 2-1.5 3-3.6 3-2 0-3.3-1-3.9-2.3z" fill="#000"/></svg>
+                </div>
+                <div class="floating-icon fi-ae" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="4" fill="#9999ff"/><text x="16" y="22" font-size="13" font-family="Arial Black,sans-serif" font-weight="900" fill="#00005b" text-anchor="middle">Ae</text></svg>
+                </div>
+                <div class="floating-icon fi-py" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="4" fill="#306998"/><path d="M16 3c-3.3 0-5.5 1.4-5.5 3.8v2.4H16v.8H8c-2.4 0-4.5 1.4-4.5 5s2.1 5 4.5 5h1.5v-2.4c0-2.7 2.3-5 5.5-5h5.5c2.4 0 4-1.5 4-3.8V6.8C24 4.4 21.7 3 19 3zm-3 1.6a1 1 0 110 2 1 1 0 010-2z" fill="#ffd43b"/><path d="M23.5 10H22v2.4c0 2.7-2.3 5-5.5 5H11c-2.4 0-4 1.5-4 3.8v3.8c0 2.4 2.3 3.8 5 3.8 3.3 0 5.5-1.4 5.5-3.8v-2.4H16v-.8h8c2.4 0 4.5-1.4 4.5-5s-2.1-5-5-5zm-6.5 12.4a1 1 0 110 2 1 1 0 010-2z" fill="#ffd43b"/></svg>
+                </div>
+                <div class="floating-icon fi-topaz" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="4" fill="#00d9ff"/><polygon points="16,5 27,23 5,23" fill="none" stroke="#00005b" stroke-width="3" stroke-linejoin="round"/><circle cx="16" cy="18" r="3.5" fill="#00005b"/></svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+            <div class="stat-card card-glass card-floating reveal reveal-up reveal-delay-1">
+                <h3 class="counter" data-target="5">0</h3>
+                <p>Projects Built</p>
+            </div>
+            <div class="stat-card card-glass card-floating reveal reveal-up reveal-delay-2">
+                <h3 class="counter" data-target="4">0</h3>
+                <p>Years Editing</p>
+            </div>
+            <div class="stat-card card-glass card-floating reveal reveal-up reveal-delay-3">
+                <h3 class="counter" data-target="100">0</h3>
+                <p>Creative Designs</p>
+            </div>
+            <div class="stat-card card-glass card-floating reveal reveal-up reveal-delay-4">
+                <h3 class="counter" data-target="5">0</h3>
+                <p>Certificates</p>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+    </section>
+
+    <hr class="section-divider">
+
+
+    <!-- ==========================================
+         CLUSTER 2: ABOUT + JOURNEY TIMELINE
+         ========================================== -->
+    <section id="about" class="section about" aria-labelledby="about-heading">
+        <div class="container">
+
+            <div class="section-header reveal reveal-up">
+                <span class="section-label">About Me</span>
+                <h2 id="about-heading">My Story & Journey</h2>
+                <p>From visual storytelling to software engineering</p>
+            </div>
+
+            <div class="about-container">
+                <div class="about-text reveal reveal-left">
+                    <p>I'm a <strong>Computer Science Engineering student</strong> from Tamil Nadu, India, passionate about frontend development, UI/UX design, and cinematic video editing. I started my journey in video editing over 4 years ago — visual storytelling is a skill I now bring into every web project.</p>
+
+                    <p class="about-quote">"Great design is invisible: it guides users naturally, communicates clearly, and leaves a lasting impression."</p>
+
+                    <p>Whether writing clean code or crafting a cinematic sequence, my goal is always the same — <em>make it memorable.</em></p>
+                </div>
+
+                <div class="about-cards">
+                    <div class="about-card reveal reveal-scale reveal-delay-1">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <h3>Frontend Dev</h3>
+                    </div>
+                    <div class="about-card reveal reveal-scale reveal-delay-2">
+                        <i class="fa-solid fa-film" aria-hidden="true"></i>
+                        <h3>Video Editor</h3>
+                    </div>
+                    <div class="about-card reveal reveal-scale reveal-delay-3">
+                        <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                        <h3>UI/UX Design</h3>
+                    </div>
+                    <div class="about-card reveal reveal-scale reveal-delay-4">
+                        <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                        <h3>Creative Dev</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journey Timeline -->
+            <div class="journey" id="journey">
+                <div class="section-header reveal reveal-up">
+                    <span class="section-label">My Journey</span>
+                    <h2>The Path So Far</h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-items">
+
+                        <div class="timeline-item reveal reveal-left">
+                            <div class="timeline-marker">🎬</div>
+                            <div class="timeline-card">
+                                <span class="year">2021</span>
+                                <h3>Video Editing</h3>
+                                <p>Started my creative journey with cinematic video editing, learning After Effects and developing a keen eye for visual storytelling.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal reveal-right">
+                            <div class="timeline-marker">🐍</div>
+                            <div class="timeline-card">
+                                <span class="year">2023</span>
+                                <h3>Python</h3>
+                                <p>Began my programming journey with Python, mastering fundamentals, logical problem-solving, and basic algorithms.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal reveal-left">
+                            <div class="timeline-marker">⚙️</div>
+                            <div class="timeline-card">
+                                <span class="year">2024</span>
+                                <h3>C & C++</h3>
+                                <p>Dove deeper into computer science with C and C++, understanding low-level memory management and complex data structures.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal reveal-right">
+                            <div class="timeline-marker">💻</div>
+                            <div class="timeline-card">
+                                <span class="year">2025</span>
+                                <h3>HTML & CSS</h3>
+                                <p>Discovered web development and fell in love with building interfaces. HTML and CSS became the foundation of my frontend skills.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal reveal-left">
+                            <div class="timeline-marker">⚡</div>
+                            <div class="timeline-card">
+                                <span class="year">2025</span>
+                                <h3>First Live Project</h3>
+                                <p>Launched Eco Scan — my first collaborative web project. Applied everything I'd learned to build a real-world application.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal reveal-right">
+                            <div class="timeline-marker">🏆</div>
+                            <div class="timeline-card">
+                                <span class="year">2025</span>
+                                <h3>AWS Certified</h3>
+                                <p>Earned AWS certifications in Cloud Computing, Generative AI, and Machine Learning — expanding into cloud and AI technologies.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item reveal reveal-left">
+                            <div class="timeline-marker">🚀</div>
+                            <div class="timeline-card">
+                                <span class="year">2026</span>
+                                <h3>Active Developer</h3>
+                                <p>Building production-ready applications, exploring AI-powered tools, and pursuing my vision of becoming a full-stack software engineer.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+
+    <!-- ==========================================
+         CLUSTER 3: SKILLS + TECH STACK + SERVICES
+         ========================================== -->
+
+    <!-- Skills -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+        <div class="container">
+            <div class="section-header reveal reveal-up">
+                <span class="section-label">Skills & Tools</span>
+                <h2 id="skills-heading">Technologies I Work With</h2>
+                <p>Interactive skill categories</p>
+            </div>
+
+            <!-- Category tabs -->
+            <div class="skills-tabs reveal reveal-up">
+                <button class="skills-tab active" data-category="all">All</button>
+                <button class="skills-tab" data-category="frontend">Frontend</button>
+                <button class="skills-tab" data-category="design">Design</button>
+                <button class="skills-tab" data-category="video">Video</button>
+                <button class="skills-tab" data-category="tools">Tools</button>
+            </div>
+
+            <div class="skills-display">
+                <!-- Frontend -->
+                <div class="skill-item reveal reveal-scale reveal-delay-1" data-category="frontend">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><path d="M5.9 27.2L3.7 2h24.7l-2.2 25.2L16 30z" fill="#e44d26"/><path d="M16 27.9l8.2-2.3 1.9-21.5H16z" fill="#f16529"/><path d="M16 13.4h-4.1l-.3-3.2H16V7.2H8.3l.8 9.3H16zm0 8l-3.4-.9-.2-2.5H9.2l.4 4.9 6.3 1.7z" fill="#ebebeb"/><path d="M16 13.4v3.1h3.8l-.4 4-3.4.9v3.2l6.3-1.8.8-9h-7.1zm0-6.2v3.1h7.5l.2-3.1z" fill="#fff"/></svg>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-item reveal reveal-scale reveal-delay-2" data-category="frontend">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><path d="M5.9 27.2L3.7 2h24.7l-2.2 25.2L16 30z" fill="#1572b6"/><path d="M16 27.9l8.2-2.3 1.9-21.5H16z" fill="#33a9dc"/><path d="M16 13.2h4.1l.3-4.1H16V6H23.8l-1.1 12.2H16zm0 8.3l-3.4-1-.2-2.5H9.2l.4 4.9 6.3 2.1z" fill="#ebebeb"/><path d="M16 13.2v3.1h-3.8l.3 3.3 3.3.9v3.2l-6.3-1.8-.8-9h7.3z" fill="#fff"/></svg>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-item reveal reveal-scale reveal-delay-3" data-category="frontend">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><rect width="32" height="32" rx="4" fill="#f7df1e"/><path d="M9 24.1l1.7-1.1c.3.6.7 1.1 1.4 1.1.7 0 1.2-.3 1.2-1.4v-7.4h2.2v7.4c0 2.2-1.3 3.3-3.2 3.3-1.7 0-2.7-.9-3.3-2zm7.9-.2l1.8-1c.5.8 1.1 1.3 2.1 1.3.9 0 1.5-.4 1.5-1.1 0-.7-.6-1-1.6-1.4l-.5-.2c-1.6-.7-2.6-1.5-2.6-3.2 0-1.6 1.2-2.8 3.1-2.8 1.4 0 2.3.5 3 1.7l-1.7 1.1c-.4-.7-.8-.9-1.4-.9-.6 0-1 .4-1 .9 0 .6.4.9 1.3 1.3l.5.2c1.8.8 2.9 1.6 2.9 3.4 0 2-1.5 3-3.6 3-2 0-3.3-1-3.9-2.3z" fill="#000"/></svg>
+                    <span>JavaScript</span>
+                </div>
+                <!-- Design -->
+                <div class="skill-item reveal reveal-scale reveal-delay-4" data-category="design">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><path d="M10 29a5 5 0 005-5v-5h-5a5 5 0 000 10z" fill="#0acf83"/><path d="M5 16a5 5 0 015-5h5v10h-5a5 5 0 01-5-5z" fill="#a259ff"/><path d="M5 6a5 5 0 015-5h5v10h-5a5 5 0 01-5-5z" fill="#f24e1e"/><path d="M15 1h5a5 5 0 010 10h-5V1z" fill="#ff7262"/><path d="M25 16a5 5 0 11-10 0 5 5 0 0110 0z" fill="#1abcfe"/></svg>
+                    <span>Figma</span>
+                </div>
+                <div class="skill-item reveal reveal-scale reveal-delay-5" data-category="design">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true" fill="none"><rect width="32" height="32" rx="6" fill="#8c52ff" opacity="0.15"/><path d="M8 24l6-6 2 2-6 6H8v-2z" fill="#8c52ff"/><path d="M18 6l8 8-10 10-8-8z" fill="#8c52ff" opacity="0.7"/><circle cx="26" cy="7" r="2" fill="#00d9ff"/><path d="M22 3v3M25 6h-3" stroke="#00d9ff" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span>UI/UX</span>
+                </div>
+                <!-- Video -->
+                <div class="skill-item reveal reveal-scale reveal-delay-6" data-category="video">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><rect width="32" height="32" rx="4" fill="#9999ff"/><text x="16" y="22" font-size="13" font-family="Arial Black,sans-serif" font-weight="900" fill="#00005b" text-anchor="middle">Ae</text></svg>
+                    <span>After Effects</span>
+                </div>
+                <div class="skill-item reveal reveal-scale reveal-delay-7" data-category="video">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><rect width="32" height="32" rx="4" fill="#00d9ff"/><polygon points="16,5 27,23 5,23" fill="none" stroke="#00005b" stroke-width="3" stroke-linejoin="round"/><circle cx="16" cy="18" r="3.5" fill="#00005b"/></svg>
+                    <span>Topaz AI</span>
+                </div>
+                <div class="skill-item reveal reveal-scale reveal-delay-8" data-category="video">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true" fill="none"><rect width="32" height="32" rx="6" fill="#00d9ff" opacity="0.12"/><rect x="4" y="14" width="24" height="14" rx="2" fill="#00d9ff" opacity="0.8"/><path d="M4 14l4-6h16l4 6H4z" fill="#00d9ff"/><circle cx="16" cy="21" r="3" fill="white" opacity="0.9"/><circle cx="16" cy="21" r="1.2" fill="#00d9ff"/></svg>
+                    <span>Editing</span>
+                </div>
+                <!-- Tools -->
+                <div class="skill-item reveal reveal-scale reveal-delay-1" data-category="tools">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 2C8.27 2 2 8.27 2 16c0 6.18 4.01 11.42 9.57 13.27.7.13.96-.3.96-.67v-2.35c-3.9.85-4.72-1.88-4.72-1.88-.64-1.62-1.56-2.05-1.56-2.05-1.27-.87.1-.85.1-.85 1.41.1 2.15 1.45 2.15 1.45 1.25 2.14 3.28 1.52 4.08 1.16.13-.9.49-1.52.89-1.87-3.11-.35-6.38-1.56-6.38-6.93 0-1.53.55-2.78 1.44-3.76-.14-.35-.62-1.78.14-3.7 0 0 1.17-.38 3.85 1.43a13.4 13.4 0 013.5-.47c1.19.01 2.38.16 3.5.47 2.67-1.81 3.84-1.43 3.84-1.43.76 1.92.28 3.35.14 3.7.9.98 1.44 2.23 1.44 3.76 0 5.38-3.28 6.57-6.4 6.92.5.43.95 1.29.95 2.6v3.85c0 .37.25.81.96.67C25.99 27.42 30 22.18 30 16c0-7.73-6.27-14-14-14z" fill="currentColor"/></svg>
+                    <span>GitHub</span>
+                </div>
+                <div class="skill-item reveal reveal-scale reveal-delay-2" data-category="tools">
+                    <svg viewBox="0 0 32 32" width="40" height="40" aria-hidden="true"><rect width="32" height="32" rx="4" fill="#007ACC"/><path d="M22 5l-9 9-4-3-3 2.5 4 3.5-4 3.5 3 2.5 4-3 9 9 4-2V7z" fill="white" opacity="0.9"/></svg>
+                    <span>VS Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section services-section" aria-labelledby="services-heading">
+        <div class="container">
+            <div class="section-header reveal reveal-up">
+                <span class="section-label">What I Offer</span>
+                <h2 id="services-heading">Services</h2>
+                <p>Premium digital solutions</p>
+            </div>
+
+            <div class="services-list">
+                <div class="service-strip reveal reveal-left">
+                    <div class="service-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+                    <div class="service-info">
+                        <h3>Frontend Development</h3>
+                        <p>Responsive, performant web applications built with modern HTML, CSS, and JavaScript. Clean code, pixel-perfect implementations.</p>
+                    </div>
+                    <div class="service-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="service-strip reveal reveal-right">
+                    <div class="service-icon"><i class="fa-solid fa-palette" aria-hidden="true"></i></div>
+                    <div class="service-info">
+                        <h3>UI/UX Design</h3>
+                        <p>User-centered interfaces that look stunning and feel intuitive. From wireframes to polished prototypes in Figma.</p>
+                    </div>
+                    <div class="service-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="service-strip reveal reveal-left">
+                    <div class="service-icon"><i class="fa-solid fa-film" aria-hidden="true"></i></div>
+                    <div class="service-info">
+                        <h3>Video Editing & Motion</h3>
+                        <p>Cinematic video production with After Effects, Topaz AI upscaling, and professional color grading. 4+ years of experience.</p>
+                    </div>
+                    <div class="service-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="service-strip reveal reveal-right">
+                    <div class="service-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+                    <div class="service-info">
+                        <h3>AI Tools & Automation</h3>
+                        <p>Leveraging generative AI and machine learning tools to build smarter, more efficient applications and workflows.</p>
+                    </div>
+                    <div class="service-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="service-strip reveal reveal-left">
+                    <div class="service-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
+                    <div class="service-info">
+                        <h3>Website Optimization</h3>
+                        <p>Performance auditing, Lighthouse optimization, accessibility improvements, and SEO best practices for existing websites.</p>
+                    </div>
+                    <div class="service-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+
+    <!-- ==========================================
+         CLUSTER 4: PROJECTS — Visual Centerpiece
+         ========================================== -->
+    <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+        <div class="container">
+            <div class="section-header reveal reveal-up">
+                <span class="section-label">Featured Work</span>
+                <h2 id="projects-heading">Projects</h2>
+                <p>What I built & why it matters</p>
+            </div>
+
+            <div class="projects-showcase">
+
+                <!-- Project 1: SEC Learners Hub — Layout 1 (left img, right text) -->
+                <article class="project project-layout-1 reveal reveal-up">
+                    <div class="project-image">
+                        <img src="project2.png" alt="SEC Learners Hub screenshot" loading="lazy" width="800" height="500">
+                        <div class="project-image-overlay">
+                            <a href="https://sec-learners-hub.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <button class="btn btn-ghost btn-sm" data-modal="secModal"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-type">Web Application</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-title">SEC Learners Hub <span style="color: var(--accent); font-size: 0.5em; vertical-align: top; margin-left: 5px; border: 1px solid var(--accent); padding: 2px 6px; border-radius: 4px;">NEW</span></h3>
+                        <p class="project-problem"><strong>Problem:</strong> Students lack a centralized platform for academic resources.</p>
+                        <p class="project-desc">A modern student community and academic resource platform centralizing study materials, previous question papers, and productivity tools.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://sec-learners-hub.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                            <button class="btn btn-ghost btn-sm" data-modal="secModal"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Case Study</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: LabRecordGenerator — Layout 2 (full-bleed overlay) -->
+                <article class="project project-layout-2 reveal reveal-up">
+                    <div class="project-image">
+                        <img src="project4.png" alt="Lab Record Generator dashboard screenshot" loading="lazy" width="1200" height="514">
+                        <div class="project-image-overlay">
+                            <a href="https://lab-record-generator-51cf3.web.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                            <button class="btn btn-ghost btn-sm" data-modal="labModal"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-type">Web Application</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-title">LabRecordGenerator</h3>
+                        <p class="project-problem"><strong>Problem:</strong> Students waste hours preparing lab records manually.</p>
+                        <p class="project-desc">Modern AI-powered Lab Record Generator with smart experiment selection, Google Auth, and automatic DOCX export. Built as a Progressive Web App.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">PWA</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://lab-record-generator-51cf3.web.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                            <button class="btn btn-ghost btn-sm" data-modal="labModal"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Case Study</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: CGPA Calculator — Layout 3 (split screen diagonal) -->
+                <article class="project project-layout-3 reveal reveal-up">
+                    <div class="project-image">
+                        <img src="project5.png" alt="CGPA Calculator web tool" loading="lazy" width="600" height="500">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-type">Tool</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-title">CGPA Calculator</h3>
+                        <p class="project-problem"><strong>Problem:</strong> Students struggle to calculate CGPA quickly.</p>
+                        <p class="project-desc">Real-time CGPA calculator with dynamic subject rows, grade reference table, circular progress display, and localStorage persistence.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://sjsanjai2007-ctrl.github.io/CGPA-Calculator/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                            <button class="btn btn-ghost btn-sm" data-modal="cgpaModal"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Case Study</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Eco Scan — Layout 4 (circular crop) -->
+                <article class="project project-layout-4 reveal reveal-up">
+                    <div class="project-image">
+                        <img src="project1.png" alt="Eco Scan — environmental scanning web app" loading="lazy" width="350" height="350">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-type">Web App</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <h3 class="project-title">Eco Scan</h3>
+                        <p class="project-problem"><strong>Problem:</strong> People don't know how to properly dispose of waste.</p>
+                        <p class="project-desc">Environmental awareness platform with AI-powered waste scanning, disposal guides, and impact tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://sjsanjai2007-ctrl.github.io/Eco-Scan/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+                            <button class="btn btn-ghost btn-sm" data-modal="ecoModal"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Case Study</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: Creative Editing — Layout 5 (asymmetric right) -->
+                <article class="project project-layout-5 reveal reveal-up">
+                    <div class="project-image">
+                        <img src="project3.png" alt="Creative cinematic editing project" loading="lazy" width="800" height="600">
+                        <div class="project-image-overlay">
+                            <a href="https://www.instagram.com/sj_editz_official__" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fa-solid fa-play"></i> Watch Reel</a>
+                            <button class="btn btn-ghost btn-sm" data-modal="editModal"><i class="fa-solid fa-file-lines"></i> Case Study</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-type">Video</span>
+                            <span class="project-year">2021–Present</span>
+                        </div>
+                        <h3 class="project-title">Creative Editing</h3>
+                        <p class="project-problem"><strong>Problem:</strong> Clients needed cinematic-quality edits without studio budgets.</p>
+                        <p class="project-desc">4+ years of cinematic video production using After Effects, Topaz AI upscaling, and professional color grading with LUTs.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">After Effects</span>
+                            <span class="tech-tag">Topaz AI</span>
+                            <span class="tech-tag">Color Grading</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://www.instagram.com/sj_editz_official__" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fa-solid fa-play" aria-hidden="true"></i> Watch Reel</a>
+                            <button class="btn btn-ghost btn-sm" data-modal="editModal"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Case Study</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+
+    <!-- ==========================================
+         CLUSTER 5: GROWTH & RECOGNITION
+         ========================================== -->
+
+    <!-- Certificates -->
+    <section id="certificates" class="section certificates-section" aria-labelledby="certs-heading">
+        <div class="container">
+            <div class="section-header reveal reveal-up">
+                <span class="section-label">Certifications</span>
+                <h2 id="certs-heading">Achievements & Credentials</h2>
+                <p>Continuous learning and professional growth</p>
+            </div>
+
+            <div class="certificates-cluster">
+                <div class="certificate-plaque reveal reveal-scale reveal-delay-1">
+                    <img src="aws-cloud.png" alt="AWS Educate Cloud Computing 101 badge" loading="lazy">
+                    <h3>Cloud Computing 101</h3>
+                    <p>AWS services and cloud infrastructure fundamentals.</p>
+                    <span class="certificate-issuer">AWS Educate</span>
+                </div>
+                <div class="certificate-plaque reveal reveal-scale reveal-delay-2">
+                    <img src="aws-ai.png" alt="AWS Educate Intro to Generative AI badge" loading="lazy">
+                    <h3>Intro to Generative AI</h3>
+                    <p>AI fundamentals, generative models and modern applications.</p>
+                    <span class="certificate-issuer">AWS Educate</span>
+                </div>
+                <div class="certificate-plaque reveal reveal-scale reveal-delay-3">
+                    <img src="aws-ml.png" alt="AWS Educate Machine Learning Foundations badge" loading="lazy">
+                    <h3>ML Foundations</h3>
+                    <p>Machine learning concepts, models, and AI-based systems.</p>
+                    <span class="certificate-issuer">AWS Educate</span>
+                </div>
+                <div class="certificate-plaque reveal reveal-scale reveal-delay-4">
+                    <img src="infosys-cert.png" alt="Infosys Springboard CompTIA A+ certificate" loading="lazy">
+                    <h3>CompTIA A+ OS</h3>
+                    <p>Microsoft OS Installation & Upgrade via Infosys Springboard.</p>
+                    <span class="certificate-issuer">Infosys Springboard</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub -->
+    <section id="github" class="section github-section" aria-labelledby="github-heading">
+        <div class="container">
+            <div class="section-header reveal reveal-up">
+                <span class="section-label">Open Source</span>
+                <h2 id="github-heading">GitHub Activity</h2>
+                <p>Code I've written publicly</p>
+            </div>
+
+            <div class="github-stats reveal reveal-up">
+                <img loading="lazy" src="https://github-readme-stats-sigma-five.vercel.app/api?username=sjsanjai2007-ctrl&show_icons=true&theme=tokyonight&hide_border=true" alt="Sanjai S J GitHub stats" width="495" height="195">
+                <img loading="lazy" src="https://github-readme-streak-stats.herokuapp.com/?user=sjsanjai2007-ctrl&theme=tokyonight&hide_border=true" alt="GitHub streak stats" width="495" height="195">
+                <img loading="lazy" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=sjsanjai2007-ctrl&layout=compact&theme=tokyonight&hide_border=true" alt="Top programming languages" width="495" height="195">
+            </div>
+
+            <div class="github-cta reveal reveal-up">
+                <a href="https://github.com/sjsanjai2007-ctrl" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-magnetic">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> View GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+
+    <!-- ==========================================
+         CLUSTER 6: CONNECT — Contact + Footer
+         ========================================== -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+        <div class="container">
+            <div class="section-header reveal reveal-up">
+                <span class="section-label">Get In Touch</span>
+                <h2 id="contact-heading">Let's Work Together</h2>
+                <p>Have a project in mind? Let's talk.</p>
+            </div>
+
+            <div class="contact-container">
+
+                <!-- Info side -->
+                <div class="contact-info reveal reveal-left">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+
+                    <div class="availability-badge">Available for freelance</div>
+
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <div class="contact-detail-text">
+                            <span>Email</span>
+                            <a href="mailto:sjsanjai2007@gmail.com">sjsanjai2007@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <div class="contact-detail-text">
+                            <span>Phone</span>
+                            <a href="tel:+919894713078">+91 9894713078</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <div class="contact-detail-text">
+                            <span>Location</span>
+                            <p>Tamil Nadu, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://github.com/sjsanjai2007-ctrl" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/sanjai._.sj" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/sanjai-s-j-45227b3a2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Form side -->
+                <form id="contact-form" class="contact-form reveal reveal-right" novalidate>
+
+                    <!-- Honeypot -->
+                    <div class="honeypot" aria-hidden="true">
+                        <label for="website">Leave blank</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="from_name">Your Name <span class="req" aria-hidden="true">*</span></label>
+                        <input type="text" id="from_name" name="from_name" placeholder="John Doe" required autocomplete="name" aria-required="true" aria-describedby="name-error">
+                        <span class="field-error" id="name-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="from_email">Your Email <span class="req" aria-hidden="true">*</span></label>
+                        <input type="email" id="from_email" name="from_email" placeholder="john@example.com" required autocomplete="email" aria-required="true" aria-describedby="email-error">
+                        <span class="field-error" id="email-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required aria-required="true" aria-describedby="message-error"></textarea>
+                        <span class="field-error" id="message-error" role="alert"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-magnetic" id="submit-btn">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        <span id="btn-label">Send Message</span>
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+    </main>
+
+
+    <!-- ======================================
+         FOOTER
+         ====================================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-social" aria-label="Social links">
+            <a href="https://github.com/sjsanjai2007-ctrl" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/sanjai._.sj" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/sanjai-s-j-45227b3a2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="mailto:sjsanjai2007@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        </div>
+        <p>&copy; 2026 <span>SANJAI S J</span> · Designed & Built with ❤️ in Tamil Nadu, India</p>
+    </footer>
+
+
+    <!-- ======================================
+         MODALS — Project case studies
+         ====================================== -->
+
+    <!-- SEC Learners Hub -->
+    <div class="modal-overlay" id="secModal" role="dialog" aria-modal="true" aria-labelledby="sec-title" hidden>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 id="sec-title">SEC Learners Hub — Case Study</h2>
+            <div class="case-study">
+                <div class="case-row"><strong>Problem</strong><p>Students lack a centralized platform to efficiently access study materials, question papers, and productivity tools.</p></div>
+                <div class="case-row"><strong>Solution</strong><p>Built a modern student community and academic resource platform with seamless UI, quick search, and cloud-based file management.</p></div>
+                <div class="case-row"><strong>Stack</strong><div class="tech-tags"><span class="tech-tag">React.js</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Firebase</span><span class="tech-tag">Vercel</span></div></div>
+                <div class="case-row"><strong>Highlights</strong>
+                    <ul><li>Subject-wise study materials & previous question papers</li><li>Fast search by subject name and code</li><li>Cloud-based file management via Cloudinary & Firebase</li><li>Secure authentication and profile management</li><li>Admin-controlled resource uploads</li></ul>
+                </div>
+                <div class="case-row"><strong>My Role</strong>
+                    <ul><li>Designed & developed the complete frontend architecture</li><li>Implemented authentication, database, and cloud storage</li><li>Optimized performance, animations, and overall UX</li></ul>
+                </div>
+            </div>
+            <a href="https://sec-learners-hub.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-cta"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Live Project</a>
+        </div>
+    </div>
+
+    <!-- Lab Record Generator -->
+    <div class="modal-overlay" id="labModal" role="dialog" aria-modal="true" aria-labelledby="lab-title" hidden>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 id="lab-title">LabRecordGenerator — Case Study</h2>
+            <div class="case-study">
+                <div class="case-row"><strong>Problem</strong><p>Students often waste hours preparing lab records manually and struggle with formatting requirements.</p></div>
+                <div class="case-row"><strong>Solution</strong><p>Built a cloud-based Lab Record Generator that automates record creation, streamlines documentation, and provides downloadable DOCX files with a professional format.</p></div>
+                <div class="case-row"><strong>Stack</strong><div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Firebase</span><span class="tech-tag">PWA</span></div></div>
+                <div class="case-row"><strong>Highlights</strong>
+                    <ul><li>Smart Record Generation & DOCX Export</li><li>Google Authentication & Firebase Hosting</li><li>Responsive UI with Dark & Light Theme</li><li>Progressive Web App Capabilities</li><li>Modern Glassmorphism Design</li></ul>
+                </div>
+                <div class="case-row"><strong>Result</strong>
+                    <ul><li>Reduced record creation time dramatically</li><li>Mobile-friendly experience & easy document generation</li><li>Fast and scalable cloud deployment</li></ul>
+                </div>
+            </div>
+            <a href="https://lab-record-generator-51cf3.web.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-cta"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Live Project</a>
+        </div>
+    </div>
+
+    <!-- CGPA Calculator -->
+    <div class="modal-overlay" id="cgpaModal" role="dialog" aria-modal="true" aria-labelledby="cgpa-title" hidden>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 id="cgpa-title">CGPA Calculator — Case Study</h2>
+            <div class="case-study">
+                <div class="case-row"><strong>Problem</strong><p>Engineering students need a fast, accurate tool to calculate semester GPA and cumulative CGPA.</p></div>
+                <div class="case-row"><strong>Solution</strong><p>Dynamic real-time CGPA calculator with subject management, grade tables, and visual progress display.</p></div>
+                <div class="case-row"><strong>Stack</strong><div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div></div>
+                <div class="case-row"><strong>Highlights</strong>
+                    <ul><li>Live CGPA calculation as user types</li><li>Dynamic add/remove subject rows</li><li>Visual circular CGPA progress ring</li><li>Grade reference table (S through U)</li><li>Auto-save with localStorage</li></ul>
+                </div>
+                <div class="case-row"><strong>Result</strong><p>Used by fellow students to track academic performance with a clean, intuitive interface.</p></div>
+            </div>
+            <a href="https://sjsanjai2007-ctrl.github.io/CGPA-Calculator/" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-cta"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Live Project</a>
+        </div>
+    </div>
+
+    <!-- Eco Scan -->
+    <div class="modal-overlay" id="ecoModal" role="dialog" aria-modal="true" aria-labelledby="eco-title" hidden>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 id="eco-title">Eco Scan — Case Study</h2>
+            <div class="case-study">
+                <div class="case-row"><strong>Problem</strong><p>People lack quick access to proper waste disposal guidance, leading to environmental damage.</p></div>
+                <div class="case-row"><strong>Solution</strong><p>Web platform where users identify waste and receive instant, actionable disposal instructions.</p></div>
+                <div class="case-row"><strong>Stack</strong><div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div></div>
+                <div class="case-row"><strong>Highlights</strong>
+                    <ul><li>AI-powered waste identification UI</li><li>Per-item eco-friendly disposal guide</li><li>Monthly impact tracking dashboard</li><li>Fully responsive across all devices</li></ul>
+                </div>
+                <div class="case-row"><strong>Team</strong>
+                    <ul><li>Paarkavi A</li><li>Sanjai S J</li><li>Siva Sundhar</li></ul>
+                </div>
+                <div class="case-row"><strong>Result</strong><p>A visually impactful platform delivering environmental education in an engaging format.</p></div>
+            </div>
+            <a href="https://sjsanjai2007-ctrl.github.io/Eco-Scan/" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-cta"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Live Project</a>
+        </div>
+    </div>
+
+    <!-- Creative Editing -->
+    <div class="modal-overlay" id="editModal" role="dialog" aria-modal="true" aria-labelledby="edit-title" hidden>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 id="edit-title">Creative Editing — Case Study</h2>
+            <div class="case-study">
+                <div class="case-row"><strong>Problem</strong><p>Clients needed cinematic-quality video production without access to expensive professional studios.</p></div>
+                <div class="case-row"><strong>Solution</strong><p>Mastered After Effects and Topaz AI to produce studio-quality edits with motion graphics and color grading.</p></div>
+                <div class="case-row"><strong>Tools</strong><div class="tech-tags"><span class="tech-tag">After Effects</span><span class="tech-tag">Topaz AI</span><span class="tech-tag">Color Grading</span></div></div>
+                <div class="case-row"><strong>Highlights</strong>
+                    <ul><li>Smooth cinematic cuts and story-driven edits</li><li>VFX and motion graphics in After Effects</li><li>AI upscaling via Topaz Video AI</li><li>Professional color grading with LUTs</li></ul>
+                </div>
+                <div class="case-row"><strong>Experience</strong><p>4+ years of continuous editing across personal and client projects, building a distinct visual style.</p></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======================================
+         SCRIPTS
+         ====================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>emailjs.init('41WUzyLiPjTI16bCg');</script>
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
